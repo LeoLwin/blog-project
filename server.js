@@ -9,7 +9,7 @@ app.use(express.json());
 
 
 
-app.get("/test", (req, res) => {
+app.get("/", (req, res) => {
     res.json('Blog API is working fine');
 });
 
@@ -27,12 +27,12 @@ const PORT = 5000;
 // });
 
 
-if (process.env.NODE_ENV !== "production") {
-    const PORT = 5000;
+// if (process.env.NODE_ENV !== "production") {
+    // const PORT = 5000;
 
     app.listen(PORT, () => {
         console.log(`Server running on ${PORT}`);
     });
-}
+// }
 
 export default app;
