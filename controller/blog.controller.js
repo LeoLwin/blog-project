@@ -9,6 +9,12 @@ router.get("/", async (req, res) => {
     try {
         console.log("call get/");
 
+         console.log("GET /api/blogs reached");
+
+    return res.json({
+        success: true,
+        message: "Blogs route is working"
+    });
         // get list form redis with key name  : list
         // if (list) {return res.json(list)}
 
