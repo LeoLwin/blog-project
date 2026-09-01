@@ -1,0 +1,103 @@
+export const success = (
+  data = null,
+  message = "Succeeded",
+  code = 200
+) => {
+   return {
+     status: "ok",
+     code,
+     message,
+     data
+  };
+};
+
+
+export const created = (
+  data = null,
+  message = "Created successfully"
+) => {
+  return {
+      status: "ok",
+      code: 201,
+      message,
+      data
+  };
+};
+
+
+export const noContent = (
+  message = "No Content"
+) => {
+  return {
+      status: "ok",
+      code: 204,
+      message,
+      data: null
+  };
+};
+
+
+export const badRequest = (
+  message = "Bad Request"
+) => {
+  return {
+      status: "error",
+      code: 400,
+      message
+  };
+};
+
+
+export const unauthorized = (
+  message = "Unauthorized"
+) => {
+  return {
+      status: "error",
+      code: 401,
+      message
+  };
+};
+
+
+export const forbidden = (
+  message = "Forbidden"
+) => {
+  return {
+      status: "error",
+      code: 403,
+      message
+  };
+};
+
+
+export const notFound = (
+  message = "Resource not found"
+) => {
+  return {
+      status: "error",
+      code: 404,
+      message
+  };
+};
+
+
+export const conflict = (
+  message = "Conflict"
+) => {
+  return {
+      status: "error",
+      code: 409,
+      message
+  };
+};
+
+
+export const internalServerError = (
+  message = "Internal Server Error"
+) => {
+  return {
+      status: "error",
+      code: 500,
+      message
+  };
+};
