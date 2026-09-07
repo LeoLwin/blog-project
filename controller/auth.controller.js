@@ -6,30 +6,30 @@ const router = Router();
 
 router.post("/login", async (req, res) => {
 
-  try {
-
-      const response =
-          await authService.login(req.body);
-
-
-      return res.json(response);
+    try {
+        console.log("Login request body: ", req.body);
+        const response =
+            await authService.login(req.body);
 
 
-
-
-  } catch (error) {
+        return res.json(response);
 
 
 
 
-      return res.json(
-          Response.internalServerError(error.message)
-      );
+    } catch (error) {
 
 
 
 
-  }
+        return res.json(
+            Response.internalServerError(error.message)
+        );
+
+
+
+
+    }
 
 
 

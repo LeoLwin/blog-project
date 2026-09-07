@@ -53,4 +53,12 @@ app.use('/static', express.static(path.join(import.meta.dirname)));
 
 app.use("/api", indexController);
 
+// if (process.env.NODE_ENV !== "production") {
+    const PORT = 5000;
+
+    app.listen(PORT, () => {
+        console.log(`Server running on ${PORT}`);
+    });
+// }
+
 export default app;
