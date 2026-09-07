@@ -49,7 +49,7 @@ router.post("/", upload.single("profile"), async (req, res) => {
 
                image: req.file
                    ? req.file.path
-                   : null
+                   : ""
 
            };
 
